@@ -1,6 +1,6 @@
-# The SQL Sanctuary
+# SQL-Granny
 
-A customizable multimedia survival-horror game built with Next.js, React, TypeScript, and Three.js. The project follows the Lab Test 2 brief by creating a playable, interactive game with a start screen, gameplay loop, score system, collision logic, animation, audio, and a unique SQL-based customization mechanic.
+SQL-Granny is a customizable multimedia survival-horror game built with Next.js, React, TypeScript, and Three.js. The project follows the Lab Test 2 brief by creating a playable, interactive game with a start screen, gameplay loop, score system, collision logic, animation, audio, and a unique SQL-based customization mechanic.
 
 ## Project summary
 
@@ -75,7 +75,7 @@ The game uses a stealth-first design where moving loudly can betray the player, 
 
 The project includes a distinct customization that goes beyond changing colors or title text.
 
-Unique customization implemented in this project:
+Unique customization implemented in SQL-Granny:
 
 - The core progression system is built around SQL clue decoding rather than a generic collectible loop.
 - Each clue includes its own database table, query prompt, canonical SQL answer, and validation logic.
@@ -304,4 +304,3 @@ The project is implemented as a web-based multimedia game using modern browser t
 ## License
 
 This project is intended for educational use as part of a multimedia lab assignment.
-
