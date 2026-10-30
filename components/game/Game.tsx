@@ -698,17 +698,23 @@ export default function App() {
       exitBeaconLight.color.setHex(allToolsReady ? 0x10b981 : 0xdc2626);
       doorMesh.material.color.setHex(allToolsReady ? 0x065f46 : 0x3f1111);
 
+
       if (config.lightingMode === 'fullbright') {
         ambientLight.intensity = 1.4;
-        scene.fog.density = 0.015;
+        if (scene.fog instanceof THREE.FogExp2) {
+          scene.fog.density = 0.015;
+        }
       } else if (config.lightingMode === 'lantern') {
         ambientLight.intensity = 0.38;
-        scene.fog.density = 0.045;
+        if (scene.fog instanceof THREE.FogExp2) {
+          scene.fog.density = 0.045;
+        }
       } else {
-        ambientLight.intensity = 0.09;
-        scene.fog.density = chapterCfg.fogDensity;
+        ambientLight.intensity = 0.14;
+        if (scene.fog instanceof THREE.FogExp2) {
+          scene.fog.density = 0.078;
+        }
       }
-
       // Orbiting 3D Background Camera during MAIN_MENU or CHAPTER_INTRO
       if (eng.status === 'MAIN_MENU' || eng.status === 'CHAPTER_INTRO' || eng.status === 'INTRO') {
         eng.menuOrbitAngle += dt * 0.18;
