@@ -23,7 +23,7 @@ export function buildRealisticGrannyMesh() {
 
   const gownMat = new THREE.MeshStandardMaterial({
     map: gownTex,
-    BumpMap: gownTex,
+    bumpMap: gownTex,
     bumpScale: 0.04,
     roughness: 0.94,
     metalness: 0.06
