@@ -2657,23 +2657,6 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-1.5">
-                {activeClueForSql.tokens.map((tok, i) => (
-                  <button
-                    key={i}
-                    type="button"
-                    onClick={() =>
-                      setSqlInput((prev) =>
-                        `${prev.trim()}${prev.trim() && tok !== ';' ? ' ' : ''}${tok}`
-                      )
-                    }
-                    className="px-2.5 py-1 rounded bg-stone-900 hover:bg-amber-900 border border-amber-500/40 text-amber-200 font-semibold"
-                  >
-                    {tok}
-                  </button>
-                ))}
-              </div>
-
               <div className="space-y-2">
                 <div className="relative flex items-center">
                   <span className="absolute left-3 text-amber-400 font-bold">SQL&gt;</span>
@@ -2689,11 +2672,7 @@ export default function App() {
                   />
                 </div>
 
-                {showSqlHint && (
-                  <div className="p-2 rounded bg-stone-900 border border-amber-500/40 text-amber-200">
-                    💡 Valid Query: <code>{activeClueForSql.canonicalQuery}</code>
-                  </div>
-                )}
+                {showSqlHint && null}
 
                 {sqlFeedback && (
                   <div
@@ -2709,19 +2688,13 @@ export default function App() {
 
                 <div className="flex flex-wrap items-center justify-between gap-2 pt-1">
                   <div className="flex items-center gap-2">
+                    
                     <button
                       type="button"
-                      onClick={() => setShowSqlHint((h) => !h)}
-                      className="px-3 py-2 rounded-lg bg-stone-900 border border-amber-500/50 text-amber-300 font-bold"
-                    >
-                      💡 SHOW HINT
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setSqlInput(activeClueForSql.canonicalQuery)}
+                      onClick={() => setSqlInput("")}
                       className="px-3 py-2 rounded-lg bg-stone-900 border border-cyan-500/50 text-cyan-300 font-bold"
                     >
-                      ⚡ AUTO-FILL QUERY
+                      ✖ CLEAR
                     </button>
                   </div>
 
