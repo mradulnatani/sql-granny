@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'The SQL Sanctuary',
+  title: 'SQL-Granny',
   description: 'A 3D survival horror game powered by Three.js and SQL puzzles.',
 };
 
